@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GalaxyEmpire Store</title>
+  <style>
+    :root{
+      --bg:#07060d;--card:rgba(14,13,25,.74);--card2:rgba(30,12,28,.76);--txt:#fff;--muted:#b9b6ce;
+      --pink:#ff2bd6;--purple:#8b5cf6;--cyan:#22d3ee;--green:#22c55e;--yellow:#facc15;--red:#ef4444;
+      --line:rgba(255,255,255,.13);--shadow:0 24px 80px rgba(0,0,0,.55);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Segoe UI,Tahoma,Arial,sans-serif;color:var(--txt);background:var(--bg);overflow-x:hidden}
+    body:before{content:"18 19 DEY  •  GALAXYEMPIRE  •  18 19 DEY";position:fixed;inset:-20%;z-index:-3;font-size:8vw;font-weight:1000;letter-spacing:.18em;line-height:1.35;color:rgba(255,0,34,.055);transform:rotate(-18deg);white-space:pre-wrap;text-shadow:0 0 36px rgba(239,68,68,.22)}
+    body:after{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 18% 10%,rgba(255,0,85,.34),transparent 32%),radial-gradient(circle at 84% 8%,rgba(139,92,246,.28),transparent 30%),radial-gradient(circle at 50% 100%,rgba(34,211,238,.2),transparent 30%),linear-gradient(135deg,#08050d 0%,#170610 42%,#040714 100%)}
+    .stars{position:fixed;inset:0;z-index:-1;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#fff 1px,transparent 1px);background-size:90px 90px,130px 130px;background-position:0 0,50px 30px;opacity:.16;animation:move 28s linear infinite}@keyframes move{to{transform:translateY(120px)}}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1180px,92vw);margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(5,5,12,.68);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-weight:1000;letter-spacing:.03em}.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--pink),var(--purple),var(--cyan));display:grid;place-items:center;box-shadow:0 0 30px rgba(255,43,214,.5)}
+    .navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a,.btn{border:1px solid var(--line);background:rgba(255,255,255,.06);padding:11px 14px;border-radius:14px;color:#eee;cursor:pointer;transition:.2s;font-weight:800}.navlinks a:hover,.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.35);box-shadow:0 10px 34px rgba(139,92,246,.22)}
+    .btn.primary{background:linear-gradient(135deg,var(--pink),var(--purple));border:0}.btn.green{background:linear-gradient(135deg,#16a34a,#22c55e);border:0;color:#05120a}.btn.red{background:linear-gradient(135deg,#ef4444,#fb7185);border:0}.btn.cyan{background:linear-gradient(135deg,#06b6d4,#22d3ee);border:0;color:#031014}
+    .hero{padding:74px 0 34px;display:grid;grid-template-columns:1.18fr .82fr;gap:28px;align-items:center}.badge{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid rgba(255,255,255,.16);border-radius:999px;background:rgba(255,255,255,.06);color:#ddd;font-weight:800}.pulse{width:9px;height:9px;background:#22c55e;border-radius:99px;box-shadow:0 0 20px #22c55e}
+    h1{font-size:clamp(42px,8vw,92px);line-height:.92;margin:18px 0 16px;letter-spacing:-.06em}.grad{background:linear-gradient(90deg,#fff,#ff2bd6,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}.sub{font-size:18px;line-height:1.75;color:var(--muted);max-width:680px}.heroBtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.heroCard,.card,.panel{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.04));border-radius:28px;box-shadow:var(--shadow);overflow:hidden}.heroCard{padding:22px;position:relative}.heroCard:before{content:"";position:absolute;inset:-1px;background:linear-gradient(135deg,rgba(255,43,214,.28),transparent,rgba(34,211,238,.22));z-index:-1}.serverbox{background:rgba(0,0,0,.24);border:1px solid var(--line);border-radius:22px;padding:18px;margin-top:14px}.ip{font-size:22px;font-weight:1000;color:#22d3ee}.mini{color:var(--muted);font-size:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.stat{padding:16px;border:1px solid var(--line);border-radius:20px;background:rgba(0,0,0,.2)}.stat b{font-size:28px}.section{padding:44px 0}.title{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:18px}.title h2{font-size:34px;margin:0}.title p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:20px;position:relative}.card:hover{transform:translateY(-4px);transition:.2s;border-color:rgba(255,255,255,.26)}.card h3{margin:0 0 8px;font-size:23px}.price{font-size:28px;font-weight:1000;color:#facc15;margin:12px 0}.tagrow{display:flex;flex-wrap:wrap;gap:10px}.tag{padding:10px 12px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-weight:1000}.rainbow{background:linear-gradient(90deg,#ef4444,#f59e0b,#facc15,#22c55e,#22d3ee,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;color:transparent}.form{display:grid;gap:12px}.input,select,textarea{width:100%;padding:13px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(0,0,0,.3);color:#fff;outline:none}textarea{min-height:90px;resize:vertical}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px}.terminal{background:#06070c;border:1px solid rgba(34,211,238,.24);border-radius:22px;overflow:hidden;box-shadow:0 0 40px rgba(34,211,238,.11)}.termTop{display:flex;align-items:center;gap:8px;padding:12px 14px;background:rgba(255,255,255,.05);border-bottom:1px solid var(--line)}.dot{width:12px;height:12px;border-radius:99px;background:#ef4444}.dot:nth-child(2){background:#facc15}.dot:nth-child(3){background:#22c55e}.termBody{padding:16px;font-family:Consolas,Monaco,monospace;color:#c7ffe5;min-height:220px;max-height:360px;overflow:auto;white-space:pre-wrap}.cmdline{display:flex;gap:8px;margin-top:10px}.cmdline input{font-family:Consolas,monospace}.ownerBox{display:none}.ownerBox.active{display:block}.pill{display:inline-block;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line);font-weight:800;color:#ddd}.orders{display:grid;gap:12px}.order{padding:13px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.05)}.copyOut{padding:12px;border-radius:14px;background:rgba(0,0,0,.3);border:1px solid var(--line);font-family:Consolas,monospace;color:#fef08a;white-space:pre-wrap}.footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);text-align:center}.notice{border:1px solid rgba(250,204,21,.28);background:rgba(250,204,21,.08);color:#fde68a;padding:13px;border-radius:16px;margin:12px 0}.ok{color:#86efac}.bad{color:#fca5a5}@media(max-width:900px){.hero,.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.navlinks{display:none}.grid3{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <nav class="nav"><div class="wrap navin"><a class="brand" href="#top"><span class="logo">🌌</span><span>GalaxyEmpire</span></a><div class="navlinks"><a href="#shop">Shop</a><a href="#ranks">Ranks</a><a href="#tags">Tags</a><a href="#link">Link</a><a href="#owner">Owner</a></div></div></nav>
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div>
+        <span class="badge"><span class="pulse"></span> Server Store • 18 / 19 DEY Edition</span>
+        <h1><span class="grad">GalaxyEmpire</span><br/>Store</h1>
+        <p class="sub">Buy Galaxy Coins, gift ranks, unlock tags, and link your Minecraft account. Built for Aternos manual-confirm setup with a powerful Owner command panel.</p>
+        <div class="heroBtns"><a class="btn primary" href="#shop">Open Shop</a><a class="btn cyan" href="#owner">Owner Console</a><button class="btn" onclick="copyText('GalaxyEmpire.aternos.me')">Copy IP</button></div>
+      </div>
+      <div class="heroCard">
+        <span class="pill">SMP • Tags • Ranks</span>
+        <div class="serverbox"><div class="mini">Server IP</div><div class="ip">GalaxyEmpire.aternos.me</div><div class="mini">Use /store in game to open this website</div></div>
+        <div class="grid3" style="margin-top:14px"><div class="stat"><b>16</b><br><span class="mini">Tags</span></div><div class="stat"><b>6</b><br><span class="mini">Ranks</span></div><div class="stat"><b>GC</b><br><span class="mini">Coins</span></div></div>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="title"><div><h2>Galaxy Coins</h2><p>Choose a package, then copy the order for Owner confirmation.</p></div><span class="pill">Manual Confirm</span></div>
+      <div class="cards" id="coinCards"></div>
+    </section>
+
+    <section id="ranks" class="section">
+      <div class="title"><div><h2>Gift Ranks</h2><p>Buy GC first, then use /rgift in game.</p></div><span class="pill">/rgift</span></div>
+      <div class="cards" id="rankCards"></div>
+    </section>
+
+    <section id="tags" class="section">
+      <div class="title"><div><h2>Tags Shop</h2><p>All GalaxyEmpire tags, including rainbow RankGifted badge.</p></div><span class="pill">/tags</span></div>
+      <div class="tagrow" id="tagList"></div>
+    </section>
+
+    <section class="section split">
+      <div class="panel card">
+        <h2>Checkout</h2>
+        <p class="mini">This static GitHub site cannot auto-give items on Aternos. Submit here, copy the order text, then send it to Owner.</p>
+        <div class="form">
+          <input class="input" id="playerName" placeholder="Minecraft Username" />
+          <input class="input" id="contact" placeholder="Telegram / Discord / Contact" />
+          <select id="selectedProduct"></select>
+          <textarea id="note" placeholder="Payment note or receipt info"></textarea>
+          <button class="btn primary" onclick="submitOrder()">Create Order</button>
+          <div class="copyOut" id="orderOut">Order output will appear here...</div>
+        </div>
+      </div>
+      <div id="link" class="panel card">
+        <h2>Link Account</h2>
+        <p class="mini">In game type <b>/link</b>, then enter your code here. Owner will confirm manually from the Owner panel.</p>
+        <div class="form">
+          <input class="input" id="linkPlayer" placeholder="Minecraft Username" />
+          <input class="input" id="linkCode" placeholder="6-digit code from /link" maxlength="12" />
+          <button class="btn green" onclick="submitLink()">Submit Link Request</button>
+          <div class="copyOut" id="linkOut">Link request output will appear here...</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="owner" class="section">
+      <div class="title"><div><h2>Owner Panel</h2><p>Console-style command generator for Aternos. Password: galaxy</p></div><span class="pill">DrGalaxy</span></div>
+      <div class="panel card" id="loginBox">
+        <div class="form"><input class="input" type="password" id="ownerPass" placeholder="Owner password" /><button class="btn primary" onclick="ownerLogin()">Enter Owner Panel</button><p class="mini">Static page password is not real security. Do not put private secrets here.</p></div>
+      </div>
+      <div class="ownerBox" id="ownerBox">
+        <div class="split">
+          <div class="terminal">
+            <div class="termTop"><span class="dot"></span><span class="dot"></span><span class="dot"></span><b style="margin-left:8px">GalaxyEmpire Console</b></div>
+            <div class="termBody" id="terminal">GalaxyEmpire Owner Console ready.
+Type or generate a command, then copy it into Aternos Console.
+
+></div>
+            <div class="cmdline" style="padding:0 14px 14px"><input class="input" id="manualCmd" placeholder="Example: gcoin add ParsaX 1000"/><button class="btn cyan" onclick="pushManual()">Add</button><button class="btn" onclick="copyTerminal()">Copy</button></div>
+          </div>
+          <div class="card">
+            <h3>Quick Commands</h3>
+            <div class="form">
+              <input class="input" id="cmdPlayer" placeholder="Player" />
+              <input class="input" id="cmdAmount" placeholder="Amount / Code / Time" value="1000" />
+              <select id="cmdRank"><option>vip</option><option>vipplus</option><option>mvp</option><option>mvpplus</option><option>mvpplusplus</option><option>galaxy</option></select>
+              <select id="cmdTag"></select>
+              <button class="btn green" onclick="genCmd('gcoin')">Generate /gcoin add</button>
+              <button class="btn primary" onclick="genCmd('rank')">Generate /rgift</button>
+              <button class="btn cyan" onclick="genCmd('tag')">Generate /gtag give</button>
+              <button class="btn" onclick="genCmd('link')">Generate /linkconfirm</button>
+            </div>
+          </div>
+        </div>
+        <div class="split" style="margin-top:18px">
+          <div class="card"><h3>Pending Orders</h3><div class="orders" id="orders"></div></div>
+          <div class="card"><h3>Pending Link Requests</h3><div class="orders" id="links"></div></div>
+        </div>
+      </div>
+      <div class="notice">Real live server console and automatic link confirmation need a backend/plugin. On GitHub Pages + Aternos, this panel generates commands for manual confirmation.</div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap">GalaxyEmpire • 18 / 19 DEY Red Edition • Made for GitHub Pages</div></footer>
+
+<script>
+const coins=[['100 GC','30,000 Toman','/gcoin add PLAYER 100'],['250 GC','70,000 Toman','/gcoin add PLAYER 250'],['500 GC','130,000 Toman','/gcoin add PLAYER 500'],['1000 GC','240,000 Toman','/gcoin add PLAYER 1000'],['2000 GC','450,000 Toman','/gcoin add PLAYER 2000'],['5000 GC','1,000,000 Toman','/gcoin add PLAYER 5000']];
+const ranks=[['VIP','100 GC','/rgift PLAYER vip 30d'],['VIP+','180 GC','/rgift PLAYER vipplus 30d'],['MVP','350 GC','/rgift PLAYER mvp 30d'],['MVP+','500 GC','/rgift PLAYER mvpplus 30d'],['MVP++','650 GC','/rgift PLAYER mvpplusplus 30d'],['GALAXY','800 GC','/rgift PLAYER galaxy 30d']];
+const tags=[['IRAN','300 GC','iran'],['USA','250 GC','usa'],['GERMANY','250 GC','germany'],['TURKEY','250 GC','turkey'],['BRAZIL','250 GC','brazil'],['ARGENTINA','250 GC','argentina'],['FRANCE','250 GC','france'],['SPAIN','250 GC','spain'],['JAPAN','250 GC','japan'],['CANADA','250 GC','canada'],['ENGLAND','250 GC','england'],['RAINBOW','500 GC','rainbow'],['GALAXY','350 GC','galaxy'],['DRAGON','700 GC','dragon'],['VOID','750 GC','void'],['EMPEROR','900 GC','emperor'],['RANKGIFTED','50 Gifts','rankgifted']];
+const $=id=>document.getElementById(id);function copyText(t){navigator.clipboard?.writeText(t);toast('Copied!')}
+function toast(t){let d=document.createElement('div');d.textContent=t;d.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111827;color:white;border:1px solid rgba(255,255,255,.2);padding:12px 18px;border-radius:14px;z-index:99';document.body.appendChild(d);setTimeout(()=>d.remove(),1500)}
+function card(title,price,cmd){return `<div class="card"><h3>${title}</h3><div class="price">${price}</div><p class="mini">Command preview:</p><div class="copyOut">${cmd}</div><button class="btn primary" onclick="selectProduct('${title.replace(/'/g,'')} - ${price}')">Select</button></div>`}
+function init(){
+ $('coinCards').innerHTML=coins.map(x=>card(x[0],x[1],x[2])).join(''); $('rankCards').innerHTML=ranks.map(x=>card(x[0],x[1],x[2])).join('');
+ $('tagList').innerHTML=tags.map(t=>`<span class="tag ${t[0]=='RAINBOW'||t[0]=='RANKGIFTED'?'rainbow':''}">${t[0]} <small style="color:#cbd5e1">${t[1]}</small></span>`).join('');
+ let opts=[...coins.map(x=>`GC Package: ${x[0]} - ${x[1]}`),...ranks.map(x=>`Rank: ${x[0]} - ${x[1]}`),...tags.map(x=>`Tag: ${x[0]} - ${x[1]}`)]; $('selectedProduct').innerHTML=opts.map(o=>`<option>${o}</option>`).join(''); $('cmdTag').innerHTML=tags.map(t=>`<option value="${t[2]}">${t[0]}</option>`).join(''); renderOwner();}
+function selectProduct(p){$('selectedProduct').value=[...$('selectedProduct').options].find(o=>o.text.includes(p.split(' - ')[0]))?.text||$('selectedProduct').value; location.hash=''; setTimeout(()=>document.querySelector('#selectedProduct').scrollIntoView({behavior:'smooth',block:'center'}),80)}
+function save(k,v){localStorage.setItem(k,JSON.stringify(v))} function load(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch{return[]}}
+function submitOrder(){let p=$('playerName').value.trim(), c=$('contact').value.trim(), prod=$('selectedProduct').value, n=$('note').value.trim(); if(!p)return toast('Enter username'); let o={id:Date.now(),player:p,contact:c,product:prod,note:n,status:'pending'}; let arr=load('ge_orders'); arr.unshift(o); save('ge_orders',arr); let text=`GALAXYEMPIRE ORDER\nPlayer: ${p}\nContact: ${c}\nProduct: ${prod}\nNote: ${n}`; $('orderOut').textContent=text; copyText(text); renderOwner();}
+function submitLink(){let p=$('linkPlayer').value.trim(), code=$('linkCode').value.trim(); if(!p||!code)return toast('Enter player and code'); let l={id:Date.now(),player:p,code:code,status:'pending'}; let arr=load('ge_links'); arr.unshift(l); save('ge_links',arr); let text=`LINK REQUEST\nPlayer: ${p}\nCode: ${code}\nOwner command: /linkconfirm ${p} ${code}`; $('linkOut').textContent=text; copyText(text); renderOwner();}
+function ownerLogin(){if($('ownerPass').value==='galaxy'){$('loginBox').style.display='none';$('ownerBox').classList.add('active');renderOwner();}else toast('Wrong password')}
+function term(s){$('terminal').textContent += `\n> ${s}`; $('terminal').scrollTop=$('terminal').scrollHeight; copyText(s)}
+function pushManual(){let c=$('manualCmd').value.trim(); if(c)term(c)} function copyTerminal(){copyText($('terminal').textContent)}
+function genCmd(type){let p=$('cmdPlayer').value.trim()||'PlayerName', a=$('cmdAmount').value.trim()||'1000', r=$('cmdRank').value, tag=$('cmdTag').value; if(type==='gcoin')term(`gcoin add ${p} ${a}`); if(type==='rank')term(`rgift ${p} ${r} ${a}`); if(type==='tag')term(`gtag give ${p} ${tag}`); if(type==='link')term(`linkconfirm ${p} ${a}`)}
+function renderOwner(){let orders=load('ge_orders'), links=load('ge_links'); if($('orders')) $('orders').innerHTML=orders.length?orders.map(o=>`<div class="order"><b>${o.player}</b> <span class="pill">${o.status}</span><br><span class="mini">${o.product}</span><br><button class="btn green" onclick="approveOrder(${o.id})">Approve Command</button> <button class="btn red" onclick="deleteOrder(${o.id})">Delete</button></div>`).join(''):'<p class="mini">No local orders yet.</p>'; if($('links')) $('links').innerHTML=links.length?links.map(l=>`<div class="order"><b>${l.player}</b> <span class="pill">Code ${l.code}</span><br><button class="btn green" onclick="term('linkconfirm ${l.player} ${l.code}')">Confirm Link</button> <button class="btn red" onclick="deleteLink(${l.id})">Delete</button></div>`).join(''):'<p class="mini">No local link requests yet.</p>'}
+function approveOrder(id){let o=load('ge_orders').find(x=>x.id===id); if(!o)return; let p=o.player, prod=o.product.toLowerCase(), cmd=''; let gc=(prod.match(/(\d+) gc/)||[])[1]; if(prod.startsWith('gc package')&&gc)cmd=`gcoin add ${p} ${gc}`; else if(prod.startsWith('rank')){let r=prod.includes('mvp++')?'mvpplusplus':prod.includes('mvp+')?'mvpplus':prod.includes('vip+')?'vipplus':prod.includes('galaxy')?'galaxy':prod.includes('mvp')?'mvp':'vip'; cmd=`rgift ${p} ${r} 30d`;} else if(prod.startsWith('tag')){let t=tags.find(x=>prod.includes(x[0].toLowerCase()))?.[2]||'iran'; cmd=`gtag give ${p} ${t}`;} term(cmd)}
+function deleteOrder(id){save('ge_orders',load('ge_orders').filter(x=>x.id!==id));renderOwner()} function deleteLink(id){save('ge_links',load('ge_links').filter(x=>x.id!==id));renderOwner()}
+init();
+</script>
+</body>
+</html>
