@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GalaxyEmpire | فروشگاه و لینک اکانت</title>
+  <style>
+    :root{
+      --bg:#070713; --card:#101025cc; --card2:#171733; --txt:#f5f5ff;
+      --muted:#b9b8d9; --p:#b14cff; --b:#35d4ff; --g:#36ff9a; --r:#ff477e; --y:#ffd166;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Tahoma,Arial,sans-serif;background:
+      radial-gradient(circle at 20% 10%,#4b168f55,transparent 28%),
+      radial-gradient(circle at 80% 30%,#0b8aa055,transparent 28%),
+      linear-gradient(135deg,#05050b,#0c0c22 50%,#070713);color:var(--txt);min-height:100vh}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1180px;margin:0 auto;padding:22px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;position:sticky;top:0;z-index:10;background:#070713cc;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff18;padding:14px 22px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px}
+    .logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--p),var(--b));display:grid;place-items:center;box-shadow:0 0 30px #b14cff66}
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap}
+    .navlinks a{padding:9px 12px;border:1px solid #ffffff1d;border-radius:14px;color:var(--muted);font-size:14px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center;padding:36px 0}
+    .card{background:var(--card);border:1px solid #ffffff18;border-radius:26px;padding:22px;box-shadow:0 20px 60px #00000055}
+    h1{font-size:46px;line-height:1.2;margin:0 0 16px;background:linear-gradient(90deg,#fff,var(--b),var(--p));-webkit-background-clip:text;color:transparent}
+    h2{font-size:26px;margin:0 0 14px}
+    p{color:var(--muted);line-height:1.9}
+    .ipbox{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:#00000055;border:1px solid #ffffff18;border-radius:20px;padding:14px;margin:18px 0}
+    .ip{direction:ltr;font-weight:900;font-size:24px;color:var(--g)}
+    button,.btn{border:0;cursor:pointer;border-radius:16px;padding:12px 16px;font-weight:900;background:linear-gradient(135deg,var(--p),var(--b));color:white;box-shadow:0 8px 24px #7b3cff55;display:inline-flex;align-items:center;gap:8px}
+    .btn2{background:#ffffff10;border:1px solid #ffffff22;color:var(--txt);box-shadow:none}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .mini{background:var(--card2);border:1px solid #ffffff14;border-radius:20px;padding:16px}
+    .price{color:var(--y);font-weight:900;font-size:20px}
+    input,select,textarea{width:100%;background:#050510;border:1px solid #ffffff22;color:white;border-radius:16px;padding:13px;margin:8px 0;font-family:Tahoma,Arial}
+    textarea{min-height:90px;direction:ltr;text-align:left}
+    .pill{display:inline-flex;border:1px solid #ffffff22;border-radius:999px;padding:7px 10px;color:#ddd;margin:4px;background:#ffffff0b}
+    .notice{border:1px solid #ffd16655;background:#ffd16614;color:#fff1be;border-radius:18px;padding:14px;margin:14px 0;line-height:1.8}
+    .ok{border-color:#36ff9a55;background:#36ff9a12;color:#d7ffe9}
+    .danger{border-color:#ff477e55;background:#ff477e12;color:#ffd9e5}
+    .footer{text-align:center;color:var(--muted);padding:30px}
+    .hide{display:none}
+    .ltr{direction:ltr;text-align:left}
+    @media(max-width:850px){.hero,.grid{grid-template-columns:1fr}h1{font-size:34px}.nav{position:relative}.ip{font-size:20px}}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="brand"><div class="logo">🌌</div><span>GalaxyEmpire</span></div>
+    <div class="navlinks">
+      <a href="#link">لینک اکانت</a><a href="#shop">فروشگاه</a><a href="#ranks">رنک‌ها</a><a href="#owner">پنل مالک</a><a href="#rules">قوانین</a>
+    </div>
+  </div>
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <h1>سرور SMP گالکسی‌امپایر</h1>
+        <p>به GalaxyEmpire خوش اومدی. اینجا می‌تونی اکانت ماینکرفتت رو به سایت لینک کنی، رنک‌ها و Galaxy Coin ها رو ببینی، و دستورات آماده برای مالک ساخته بشه.</p>
+        <div class="ipbox">
+          <span>IP سرور:</span><span id="serverIp" class="ip">GalaxyEmpire.tgmc.ir</span>
+          <button onclick="copyText('GalaxyEmpire.tgmc.ir')">کپی IP</button>
+        </div>
+        <a class="btn" href="#link">🔗 لینک اکانت</a>
+        <a class="btn btn2" href="#shop">💎 دیدن فروشگاه</a>
+      </div>
+      <div class="card">
+        <h2>وضعیت لینک اکانت</h2>
+        <p>داخل سرور دستور زیر رو بزن:</p>
+        <div class="notice ok ltr">/link</div>
+        <p>بعد کدی که سرور بهت میده رو اینجا وارد کن. این سایت روی GitHub Pages هست، پس تأیید نهایی باید توسط Owner Console انجام بشه.</p>
+      </div>
+    </section>
+
+    <section id="link" class="card">
+      <h2>🔗 لینک اختصاصی اکانت</h2>
+      <div class="notice">
+        اول داخل سرور بزن <b class="ltr">/link</b>. بعد Username و Code رو اینجا وارد کن. اگر لینک با پارامتر باز شده باشه، خودش پر میشه.
+      </div>
+      <div class="grid">
+        <div class="mini">
+          <label>نام پلیر Minecraft</label>
+          <input id="linkPlayer" placeholder="مثلاً ParsaX">
+        </div>
+        <div class="mini">
+          <label>کد لینک</label>
+          <input id="linkCode" placeholder="مثلاً GE-123456">
+        </div>
+        <div class="mini">
+          <label>عملیات</label>
+          <button onclick="makeLinkRequest()">ساخت درخواست لینک</button>
+        </div>
+      </div>
+      <div id="linkResult" class="notice ok hide"></div>
+      <textarea id="linkCommand" readonly placeholder="Command for owner..."></textarea>
+      <button class="btn2" onclick="copyFrom('linkCommand')">کپی دستور تأیید برای Owner</button>
+    </section>
+
+    <section id="shop" class="card">
+      <h2>💎 Galaxy Coins</h2>
+      <div class="grid">
+        <div class="mini"><b>100 GC</b><div class="price">30,000 تومان</div></div>
+        <div class="mini"><b>250 GC</b><div class="price">70,000 تومان</div></div>
+        <div class="mini"><b>500 GC</b><div class="price">130,000 تومان</div></div>
+        <div class="mini"><b>1000 GC</b><div class="price">240,000 تومان</div></div>
+        <div class="mini"><b>2000 GC</b><div class="price">450,000 تومان</div></div>
+        <div class="mini"><b>5000 GC</b><div class="price">1,000,000 تومان</div></div>
+      </div>
+      <p>بعد از پرداخت، رسید و نام داخل بازی رو برای Owner بفرست.</p>
+      <button class="btn2" onclick="copyText('6219861402420045')">کپی کارت 6219861402420045</button>
+      <button class="btn2" onclick="copyText('6219861850311746')">کپی کارت 6219861850311746</button>
+    </section>
+
+    <section id="ranks" class="card">
+      <h2>⭐ رنک‌ها</h2>
+      <div class="grid">
+        <div class="mini"><b>VIP</b><div class="price">100 GC</div></div>
+        <div class="mini"><b>VIP+</b><div class="price">180 GC</div></div>
+        <div class="mini"><b>VIP++</b><div class="price">250 GC</div></div>
+        <div class="mini"><b>MVP</b><div class="price">350 GC</div></div>
+        <div class="mini"><b>MVP+</b><div class="price">500 GC</div></div>
+        <div class="mini"><b>MVP++</b><div class="price">650 GC</div></div>
+        <div class="mini"><b>MVP++ قرمز</b><div class="price">700 GC</div></div>
+        <div class="mini"><b>MVP++ نارنجی</b><div class="price">750 GC</div></div>
+        <div class="mini"><b>MVP++ دارک‌بلو</b><div class="price">800 GC</div></div>
+        <div class="mini"><b>GALAXY</b><div class="price">1000 GC</div></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>🏷️ تگ‌ها</h2>
+      <span class="pill">IRAN</span><span class="pill">USA</span><span class="pill">GERMANY</span><span class="pill">TURKEY</span>
+      <span class="pill">BRAZIL</span><span class="pill">ARGENTINA</span><span class="pill">FRANCE</span><span class="pill">SPAIN</span>
+      <span class="pill">JAPAN</span><span class="pill">CANADA</span><span class="pill">ENGLAND</span><span class="pill">RAINBOW</span>
+      <span class="pill">GALAXY</span><span class="pill">DRAGON</span><span class="pill">VOID</span><span class="pill">EMPEROR</span>
+    </section>
+
+    <section id="owner" class="card">
+      <h2>🛠️ Owner Console</h2>
+      <div class="notice danger">این پنل فقط کامند آماده می‌سازه. چون سایت روی GitHub Pages هست، کامند مستقیم روی سرور اجرا نمی‌شود. دستور ساخته‌شده را داخل Console سرور بزن.</div>
+      <label>رمز مالک</label>
+      <input id="ownerPass" type="password" placeholder="رمز را وارد کن">
+      <button onclick="loginOwner()">ورود به پنل</button>
+      <div id="ownerPanel" class="hide">
+        <div class="grid">
+          <div class="mini">
+            <h3>افزودن Galaxy Coin</h3>
+            <input id="gcPlayer" placeholder="Player">
+            <input id="gcAmount" type="number" placeholder="Amount">
+            <button onclick="cmdGC()">ساخت کامند</button>
+          </div>
+          <div class="mini">
+            <h3>دادن رنک</h3>
+            <input id="rankPlayer" placeholder="Player">
+            <select id="rankName">
+              <option>vip</option><option>vipplus</option><option>vipplusplus</option><option>mvp</option>
+              <option>mvpplus</option><option>mvpplusplus</option><option>mvpplusplusr</option>
+              <option>mvpplusplusor</option><option>mvpplusplusxd</option><option>galaxy</option>
+            </select>
+            <input id="rankTime" placeholder="30d یا perm">
+            <button onclick="cmdRank()">ساخت کامند</button>
+          </div>
+          <div class="mini">
+            <h3>تأیید /link</h3>
+            <input id="verifyPlayer" placeholder="Player">
+            <input id="verifyCode" placeholder="Code">
+            <button onclick="cmdVerify()">ساخت کامند</button>
+          </div>
+        </div>
+        <textarea id="ownerCmd" readonly></textarea>
+        <button class="btn2" onclick="copyFrom('ownerCmd')">کپی کامند</button>
+      </div>
+    </section>
+
+    <section id="rules" class="card">
+      <h2>📜 قوانین</h2>
+      <p>چیت، باگ‌زدن، توهین، تبلیغ سرور دیگر و خرابکاری ممنوع است. Respect داشته باش و Empire خودت رو بساز.</p>
+      <p><b>Owner:</b> DrGalaxy — <b>Developer:</b> PersiaOP</p>
+    </section>
+    <div class="footer">GalaxyEmpire © ساخته شده برای IP: GalaxyEmpire.tgmc.ir</div>
+  </main>
+  <script>
+    const OWNER_PASSWORD = 'DrGalaxy123';
+    function copyText(t){navigator.clipboard.writeText(t); alert('کپی شد: '+t)}
+    function copyFrom(id){let e=document.getElementById(id); e.select(); navigator.clipboard.writeText(e.value); alert('کپی شد')}
+    function qs(name){return new URLSearchParams(location.search).get(name)||''}
+    window.addEventListener('load',()=>{
+      document.getElementById('linkPlayer').value = qs('player') || qs('u');
+      document.getElementById('linkCode').value = qs('code');
+    });
+    function makeLinkRequest(){
+      const p=document.getElementById('linkPlayer').value.trim();
+      const c=document.getElementById('linkCode').value.trim();
+      if(!p||!c){alert('نام پلیر و کد لینک را وارد کن');return}
+      const cmd=`linkverify ${p} ${c}`;
+      document.getElementById('linkCommand').value=cmd;
+      const r=document.getElementById('linkResult');
+      r.classList.remove('hide');
+      r.innerHTML=`درخواست لینک برای <b>${p}</b> ساخته شد. این کد را برای Owner بفرست یا دستور زیر را در Owner Console بزن.`;
+    }
+    function loginOwner(){
+      if(document.getElementById('ownerPass').value===OWNER_PASSWORD){
+        document.getElementById('ownerPanel').classList.remove('hide');
+      }else alert('رمز اشتباه است');
+    }
+    function out(cmd){document.getElementById('ownerCmd').value=cmd}
+    function cmdGC(){out(`gcoin add ${gcPlayer.value.trim()} ${gcAmount.value.trim()}`)}
+    function cmdRank(){
+      const t=rankTime.value.trim();
+      const p=rankPlayer.value.trim();
+      const r=rankName.value;
+      out(t==='perm'?`lp user ${p} parent add ${r}`:`lp user ${p} parent addtemp ${r} ${t}`);
+    }
+    function cmdVerify(){out(`linkverify ${verifyPlayer.value.trim()} ${verifyCode.value.trim()}`)}
+  </script>
+</body>
+</html>
